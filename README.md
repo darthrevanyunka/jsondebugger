@@ -12,7 +12,6 @@ npm run dev
 ## Build a private static version
 
 This project can be shipped as a static bundle that runs fully in the browser.
-The app header also includes a `Download static site` button after build.
 
 ```bash
 npm install
@@ -20,6 +19,7 @@ npm run build
 ```
 
 That command creates `dist/json-debugger-static.zip` and adds a download button in the app pointing to it.
+That command creates `dist/json-debugger-static.zip`.
 
 ## Share and use privately
 
