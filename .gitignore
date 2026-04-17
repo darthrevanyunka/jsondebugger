@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+index-*.js
+index-*.css
+app-*.js
+app-*.css
+chunk-*.js
