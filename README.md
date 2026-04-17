@@ -18,8 +18,21 @@ npm install
 npm run build
 ```
 
-That command creates `dist/json-debugger-static.zip` and adds a download button in the app pointing to it.
 That command creates `dist/json-debugger-static.zip`.
+
+## GitHub Pages (project site)
+
+This repo includes a small static site under `docs/` that explains how to use the tool and links to the live app:
+
+- **Live app:** [https://jsondebugger.vercel.app/](https://jsondebugger.vercel.app/)
+
+To publish on GitHub:
+
+1. Push the `docs/` folder to your default branch.
+2. In the repository **Settings → Pages**, set **Source** to **Deploy from a branch**, choose that branch, and set the folder to **`/docs`**.
+3. After the workflow runs, the site is available at `https://<user>.github.io/<repo>/` (or your configured custom domain).
+
+The Vite app still uses the root `index.html` for `npm run dev` and `npm run build`; the GitHub Pages landing page is only `docs/index.html`.
 
 ## Share and use privately
 

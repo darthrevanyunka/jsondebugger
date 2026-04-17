@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JSON Debugger — explore JSON and filter arrays with JavaScript expressions in the browser."
+    />
+    <title>JSON Debugger</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f8fa;
+        --fg: #1f2328;
+        --muted: #656d76;
+        --link: #0969da;
+        --border: #d0d7de;
+        --card: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1117;
+          --fg: #e6edf3;
+          --muted: #8b949e;
+          --link: #58a6ff;
+          --border: #30363d;
+          --card: #161b22;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--fg);
+        background: var(--bg);
+      }
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 3rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem;
+      }
+      .lead {
+        margin: 0 0 1.75rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+      .cta {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: 0.65rem 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        background: var(--link);
+        border-radius: 0.375rem;
+      }
+      .cta:hover {
+        filter: brightness(1.08);
+      }
+      .cta:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 2px;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        padding: 1.25rem 1.35rem;
+        margin-bottom: 1.25rem;
+      }
+      section h2 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        margin: 0 0 0.75rem;
+      }
+      ol {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.9em;
+        padding: 0.1em 0.35em;
+        border-radius: 0.25rem;
+        background: color-mix(in srgb, var(--fg) 8%, transparent);
+      }
+      footer {
+        margin-top: 2rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+      footer a {
+        color: var(--link);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>JSON Debugger</h1>
+      <p class="lead">
+        Paste JSON, point at an array, and filter rows with a short JavaScript expression—right in your browser.
+      </p>
+      <p>
+        <a class="cta" href="https://jsondebugger.vercel.app/">Open JSON Debugger</a>
+      </p>
+
+      <section aria-labelledby="how-heading">
+        <h2 id="how-heading">How to use</h2>
+        <ol>
+          <li>
+            <strong>Open the app</strong> using the link above (hosted at
+            <a href="https://jsondebugger.vercel.app/">jsondebugger.vercel.app</a>).
+          </li>
+          <li>
+            <strong>Paste your JSON</strong> into the input panel. Your data stays in the page; nothing is sent to a server.
+          </li>
+          <li>
+            <strong>Set the array path</strong> if your list is nested—for example <code>data.orders</code>. Leave it blank if the top-level value is already an array.
+          </li>
+          <li>
+            <strong>Write a filter</strong> as <code>item =&gt; …</code> using the expression body only, e.g. <code>item.resultCode !== 0</code> or <code>item.status === &quot;failed&quot;</code>.
+          </li>
+          <li>
+            <strong>Review matches</strong> in the tree or raw view, and use <strong>copy result</strong> to copy the filtered JSON.
+          </li>
+        </ol>
+      </section>
+
+      <footer>
+        <p>
+          This page is for <strong>GitHub Pages</strong>. The live tool runs at
+          <a href="https://jsondebugger.vercel.app/">https://jsondebugger.vercel.app/</a>.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
