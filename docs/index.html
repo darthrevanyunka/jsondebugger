@@ -73,6 +73,21 @@
         outline: 2px solid var(--link);
         outline-offset: 2px;
       }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 0 2rem;
+      }
+      .secondary {
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--link);
+      }
+      .secondary:hover {
+        text-decoration: underline;
+      }
       section {
         background: var(--card);
         border: 1px solid var(--border);
@@ -121,8 +136,9 @@
       <p class="lead">
         Paste JSON, point at an array, and filter rows with a short JavaScript expression—right in your browser.
       </p>
-      <p>
+      <p class="actions">
         <a class="cta" href="https://jsondebugger.vercel.app/">Open JSON Debugger</a>
+        <a class="secondary" href="https://github.com/darthrevanyunka/jsondebugger">Source on GitHub</a>
       </p>
 
       <section aria-labelledby="how-heading">
@@ -151,6 +167,10 @@
         <p>
           This page is for <strong>GitHub Pages</strong>. The live tool runs at
           <a href="https://jsondebugger.vercel.app/">https://jsondebugger.vercel.app/</a>.
+        </p>
+        <p>
+          Repository:
+          <a href="https://github.com/darthrevanyunka/jsondebugger">github.com/darthrevanyunka/jsondebugger</a>.
         </p>
       </footer>
     </main>

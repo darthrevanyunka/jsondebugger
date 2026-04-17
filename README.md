@@ -2,6 +2,8 @@
 
 JSON Debugger is a local-first tool to inspect JSON and quickly filter arrays using JavaScript expressions (for example `item.reason !== 0`).
 
+**Repository:** [github.com/darthrevanyunka/jsondebugger](https://github.com/darthrevanyunka/jsondebugger) · **Live app:** [jsondebugger.vercel.app](https://jsondebugger.vercel.app/)
+
 ## Run locally for development
 
 ```bash

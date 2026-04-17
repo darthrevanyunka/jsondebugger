@@ -66,6 +66,8 @@ const SAMPLE = JSON.stringify({
 
 const SAMPLE_PATH = "data.orders";
 
+const REPO_URL = "https://github.com/darthrevanyunka/jsondebugger";
+
 const PRESET_FILTERS = [
   { label: "reason !== 0", expr: "item.reason !== 0" },
   { label: "status === 'failed'", expr: "item.status === 'failed'" },
@@ -215,17 +217,35 @@ export default function App() {
           JSON<span style={{ color: "#3fb950" }}>Debug</span>
         </span>
         <span style={{ color: "#444", fontSize: 11 }}>live filter explorer</span>
-        {parsed && (
-          <span style={{
-            marginLeft: "auto", fontSize: 11, color: "#8b949e",
-            background: "#161b22", border: "1px solid #30363d",
-            padding: "2px 8px", borderRadius: 4,
-          }}>
-            {filterExpr.trim()
-              ? `${count} / ${totalCount} matching`
-              : `${totalCount} items`}
-          </span>
-        )}
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 12 }}>
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: 11,
+              color: "#8b949e",
+              textDecoration: "none",
+              border: "1px solid #30363d",
+              borderRadius: 4,
+              padding: "4px 10px",
+            }}
+            title="Source on GitHub"
+          >
+            GitHub
+          </a>
+          {parsed && (
+            <span style={{
+              fontSize: 11, color: "#8b949e",
+              background: "#161b22", border: "1px solid #30363d",
+              padding: "2px 8px", borderRadius: 4,
+            }}>
+              {filterExpr.trim()
+                ? `${count} / ${totalCount} matching`
+                : `${totalCount} items`}
+            </span>
+          )}
+        </div>
       </div>
 
       <div style={{ display: "flex", flex: 1, overflow: "hidden", height: "calc(100vh - 48px)" }}>
